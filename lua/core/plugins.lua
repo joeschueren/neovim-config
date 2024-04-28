@@ -14,6 +14,7 @@ local packer_bootstrap = ensure_packer()
 return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
   use 'ellisonleao/gruvbox.nvim'
+  use 'Mofiqul/vscode.nvim'
   use 'nvim-tree/nvim-tree.lua'
   use 'nvim-tree/nvim-web-devicons'
   use 'nvim-lualine/lualine.nvim'
@@ -21,7 +22,7 @@ return require('packer').startup(function(use)
   use 'windwp/nvim-autopairs'
   use {
 	'nvim-telescope/telescope.nvim',
-	tag = '0.1.0',
+	tag = '0.1.4',
 	requires = { {'nvim-lua/plenary.nvim'} }
   }
   use {
