@@ -1,7 +1,10 @@
 require("mason").setup()
 require("mason-lspconfig").setup({
-  ensure_installed = { "tsserver", "lua_ls" }
+  ensure_installed = { "tsserver", "phpactor", "lua_ls" }
 })
 
-require'lspconfig'.lua_ls.setup {}
-require'lspconfig'.tsserver.setup {}
+local capabilties = require('cmp_nvim_lsp').default_capabilities()
+
+require('lspconfig').lua_ls.setup { capabilities = capabilities }
+require('lspconfig').tsserver.setup { capabilities = capabilities }
+require('lspconfig').phpactor.setup { capabilities = capabilities }
